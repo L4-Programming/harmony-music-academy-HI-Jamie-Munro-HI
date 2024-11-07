@@ -1,3 +1,3 @@
 // javascript
 
-alert("Hello from index.js!");
+console.log("You are signing up");
