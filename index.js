@@ -52,7 +52,7 @@ form.addEventListener("submit", function (event) {
   if (userHours > maxAllowedHours) {
     addError(
       "hoursPerWeek",
-      `You can only study a maximum of ${maxAllowedHours} hours per week.`
+      `You can only study a maximum of ${maxAllowedHours} hours per week for your chosen level.`
     );
   }
 
@@ -92,5 +92,6 @@ form.addEventListener("submit", function (event) {
   console.log({ userEmail, userLevel, userHours });
   console.log({ errors });
 });
+
 // Calculate the total cost
 // Display the total cost to the user
