@@ -4,12 +4,15 @@ let form = document.querySelector("form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
+  // Store the user's email address as userEmail (string/text)
   let userEmail = document.querySelector("#email").value;
-  console.log({ userEmail });
+  // Store the user's level = userLevel (string)
+  let userLevel = document.querySelector("#level").value;
+  // Get the user's hours of study = userHours (number)
+  let userHours = document.querySelector("#hoursPerWeek").value;
+  console.log({ userEmail, userLevel, userHours });
 });
-// Get the user's email address = userEmail (string)
-// Get the user's level = userLevel (string)
-// Get the user's hours of study = userHours (number)
+
 // Validate the user's input
 // Check if the user has selected a level = make sure that the level chosen decides the hours allowed
 // Check if the user has provided an email address = make sure the email is valid
