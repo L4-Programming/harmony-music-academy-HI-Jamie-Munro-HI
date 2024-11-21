@@ -1,3 +1,4 @@
+
 export function displayErrors(errors) {
   for (let field in errors) {
     let inputElement = document.querySelector(`#${field}`);
@@ -25,11 +26,31 @@ export function displayErrors(errors) {
   }
 }
 
+function removeErrors() {
+  let errorInputs = document.querySelectorAll(".error-input");
+  errorInputs.forEach((input) => {
+    input.classList.remove("error-input");
+  });
+
+  let errorLabels = document.querySelectorAll(".error-label");
+  errorLabels.forEach((label) => {
+    label.classList.remove("error-label");
+  });
+
+  let errorMessages = document.querySelectorAll(".error-message");
+  errorMessages.forEach((div) => {
+    div.classList.remove("error-message");
+    div.innerHTML = "";
+  });
+}
+
 export function validateForm({ userEmail, userLevel, userHours }) {
   const maxHoursPerLevel = {
       basic: 5,
       advanced: 10,
   };
+
+  removeErrors();
 
   let errors = {};
 
