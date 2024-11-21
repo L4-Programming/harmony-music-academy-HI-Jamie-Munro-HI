@@ -1,4 +1,3 @@
-
 export function displayErrors(errors) {
   for (let field in errors) {
     let inputElement = document.querySelector(`#${field}`);

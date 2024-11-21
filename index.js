@@ -1,4 +1,5 @@
 import { validateForm } from "./validateForm.js";
+import { calculateCosts } from "./calculateCosts.js";
 
 // Capture user's input on form submission
 let form = document.querySelector("form");
@@ -17,7 +18,14 @@ form.addEventListener("submit", function (event) {
   const result = validateForm({ userEmail, userLevel, userHours });
   
   console.log ({ result });
+
+  // Calculate the total cost
+  if (result) {
+    const output = calculateCosts(result);
+
+    console.log ({ output });
+  }
 });
 
-// Calculate the total cost
+
 // Display the total cost to the user
