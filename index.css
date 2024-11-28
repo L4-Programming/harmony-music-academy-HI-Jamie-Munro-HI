@@ -131,24 +131,55 @@ button {
   font-size: 1.2rem;
 }
 
+.results-details {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  text-align: center;
+}
+.results-detail {
+  text-transform: uppercase;
+  color: var(--grey-500);
+  font-size: 1.3rem;
+}
+.results-email {
+  background-color: var(--brand-light);
+  color: var(--white);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.results-cost {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 2rem 0;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.results-cost span {
+  font-size: 0.8rem;
+  color: var(--brand-dark);
+}
+
 #results dl {
-  padding: 2rem;
   background-color: var(--white);
   width: 100%;
   border-radius: 1rem;
   box-shadow: var(--box-shadow-lg);
 }
 #results dt {
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  font-size: 1.2rem;
-}
-#results dd {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-#results dd:last-of-type {
-  margin-bottom: 0;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--brand-dark);
 }
 
 @media screen and (max-width: 640px) {

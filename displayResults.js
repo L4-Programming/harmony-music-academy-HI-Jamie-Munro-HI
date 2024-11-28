@@ -5,18 +5,21 @@ export function displayResults(output) {
 let results = document.querySelector("#results");
 
 results.innerHTML = `
-<dl>
-  <dt>Email</dt>
-  <dd>${output.userEmail}</dd>
+  <dl>
+    <dd class="results-email">${output.userEmail}</dd>
 
-  <dt>Level</dt>
-  <dd>${output.userLevel}</dd>
+    <dd class="results-cost">£${output.totalCost}<span>per week</span></dd>
 
-  <dt>Hours per week</dt>
-  <dd>${output.userHours}</dd>
-
-  <dt>Total cost</dt>
-  <dd>£${output.totalCost}</dd>
-</dl>
+    <div class="results-details">
+      <div>
+        <dt>Level</dt>
+        <dd class="results-detail">${output.userLevel}</dd>
+      </div>
+      <div>
+        <dt>Hours</dt>
+        <dd class="results-detail">${output.userHours}</dd>
+      </div>
+    </div>
+  </dl>
 `;
 }
